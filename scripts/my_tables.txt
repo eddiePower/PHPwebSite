@@ -1,0 +1,61 @@
+Data Currently in the database as of time of submission 13/9/2013.
+
+CUSTOMER:
+
+   CUST_ID CUST_GNAME           CUST_FNAME                     CUST_STREET                    CUST_SUBURB                    CUST_STATE CUST_POSTCODE CUST_EMAIL                                         CUST_PHONE   CUST_MOBILE
+---------- -------------------- ------------------------------ ------------------------------ ------------------------------ ---------- ------------- -------------------------------------------------- ------------ ------------
+         1 Bilbo                Baggains                       3 Hobo lane                    moredoor                       LOTR       3199          bilbo@gmail.com                                    99887766     0404506070   
+         2 Eddie                Power                          3 Green street                 Frankston                      VIC        3199          edster2007@gmail.com                               95414526     0427578980   
+         3 John                 Kilmer                         54 cantact lane                sometown                       NSW        2354          jKiller@nowhere.com                                97456332     045674567    
+         4 Jackie               Jones                          23 cantSee laneway             Sringaleak                     WA         4565          jackie@gmail.com                                   98908342     0452987432   
+         5 Gandalf              Dawizard                       43 hightower appmnt            moordore village               QLD        6543          gandalf@wizfiz.com                                 88331450     0456973012   
+         6 Bruce                Willis                         234 park ave                   cheltnham                      VIC        3113          b.willis@diehard65.com                                          0423322554   
+         7 Levi                 boss                           34 high close                  floating town                  VIC        3124          levi@jjeans.com                                                              
+         8 Rusty                Powell                         34 lowest close                main town                      NSQ        2124          eddie.power@icloud.com                                          0423456785   
+
+HORSE: 
+
+  HORSE_ID HORSE_NAME                     HORSE_GENDER HORSE_HEIGHT HORSE_IMAGE                              HORSE_BREED
+---------- ------------------------------ ------------ ------------ ---------------------------------------- -----------
+         1 Mr.Ed                          M                    20.8 mrEd.jpg                                           1 
+         2 Pharlap                        F                    16.8 pharlap.jpg                                        3 
+         3 Black Caviar                   M                    19.6 blkCaviar.jpg                                      2 
+         4 Harry Trotter                  M                    17.6 tiger.jpg                                          4 
+         5 Henries Turn                   M                    16.5 donkey.jpg                                         5 
+
+BREED
+
+  BREED_ID BREED_NAME                                       
+---------- --------------------------------------------------
+         1 Palamino                                           
+         2 Shetlen                                            
+         3 Thurobred                                          
+         4 Stalian                                            
+         5 Monty carlo                                        
+
+SKILL
+
+  SKILL_ID SKILL_DESC                                       
+---------- --------------------------------------------------
+         1 Show Jumping                                       
+         2 Dressage                                           
+         3 Polo                                               
+         4 Cutting                                            
+         5 Ballroom Dancing                                   
+
+HORSE_SKILL
+
+  HORSE_ID   SKILL_ID
+---------- ----------
+         1          1 
+         1          4 
+         2          1 
+         2          2 
+         2          3 
+         3          1 
+         3          4 
+         3          5 
+         4          1 
+         4          4 
+         4          5 
+      

@@ -1,0 +1,64 @@
+/*
+  -- Filename: Horsect.txt
+  -- Date: 11/08/2013
+  -- Creator: Eddie Power
+  -- Id: 22583459
+  -- Email: empow3@student.monash.edu
+  -- Descript: My table create statements.
+*/
+
+create table customer (
+cust_id numeric not null,
+cust_gname character(20) not null,
+cust_fname character(30) not null,
+cust_street character(30) not null,
+cust_suburb character(30) not null,
+cust_state character(6) not null,
+cust_postcode character(4) not null,
+cust_email character(50) not null,
+cust_phone character(12),
+cust_mobile character(12),
+constraint pk_customer primary key(cust_id)
+);
+
+create table breed(
+breed_id numeric not null,
+breed_name character(50) not null,
+constraint pk_breed primary key(breed_id)
+);
+
+create table horse(
+horse_id numeric not null,
+horse_name character(30) not null,
+horse_gender character(1) not null,
+horse_height decimal(5,2) not null,
+horse_image character(40),
+horse_breed numeric not null,
+constraint pk_horse primary key(horse_id),
+constraint fk_horse foreign key(horse_breed)
+references breed(breed_id) ON DELETE CASCADE ENABLE
+);
+
+create table skill(
+skill_id numeric not null,
+skill_desc character(50) not null,
+constraint pk_skill primary key(skill_id)
+);
+
+create table horse_skill(
+horse_id numeric not null,
+skill_id numeric not null,
+constraint pk_horse_skill primary key(horse_id, skill_id),
+constraint fk_horse_skill foreign key(horse_id)
+references horse(horse_id) ON DELETE CASCADE,
+constraint fk_horse_skill1 foreign key(skill_id) 
+references skill(skill_id) ON DELETE CASCADE
+);
+
+//******************END*OF*CREATE*TABLE*DDL**************************************************************************//
+
+CREATE SEQUENCE CUSTID_SEQ MINVALUE 1 MAXVALUE 9999 INCREMENT BY 1 START WITH 1;
+CREATE SEQUENCE HORSEID_SEQ MINVALUE 1 MAXVALUE 9999 INCREMENT BY 1 START WITH 1;
+CREATE SEQUENCE BREEDID_SEQ MINVALUE 1 MAXVALUE 9999 INCREMENT BY 1 START WITH 1;
+CREATE SEQUENCE SKILLID_SEQ MINVALUE 1 MAXVALUE 9999 INCREMENT BY 1 START WITH 1;
+//******************END*OF*CREATE*SEQUENCES*DDL**************************************************************************//
